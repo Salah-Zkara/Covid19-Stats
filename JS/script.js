@@ -47,7 +47,7 @@ function fnclk(e) {
             window.myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: dlabels,
+                    labels: dlabels.sort(),
                     datasets: [{
                         label: 'Confirmer',
                         data: C_cov,
