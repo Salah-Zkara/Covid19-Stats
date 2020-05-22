@@ -1,0 +1,105 @@
+header{
+    background-color: #54af70;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+img{
+    margin: 15px;
+}
+#cov{
+    font-family: 'Baloo Paaji 2', cursive;
+    font-weight: 700;
+    margin: auto;
+}
+#idsd{
+    font-family: 'Baloo Paaji 2', cursive;
+    font-weight: 600;
+}
+#este{
+    font-family: 'Baloo Paaji 2', cursive;
+    font-weight: 500;
+}
+#ids{
+    position: relative;
+    /*margin: 10px;*/
+    bottom: 10px;
+    right: 30px;
+}
+#container{
+    position: absolute;
+    width: 100%;
+    height: 77.5%;
+    top: 20%;
+    left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.items{
+    position: relative;
+    margin: 20px;
+    height: 90%;
+    overflow: auto;
+}
+
+#dleft{
+    border: 1px solid gray;
+    width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    user-select: none;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+#chart{
+    border: 1px solid gray;
+    width: 75%;
+}
+
+footer{
+    background-color: #54af70;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5%;
+    text-align: center;
+    font-family: 'Baloo Paaji 2', cursive;
+    font-weight: 500;
+}
+
+.countries{
+    background-color: #8cd4a3;
+    margin: 2px auto;
+    height: 20px;
+    width: 90%;
+    padding-left: 10px;
+}
+
+.countries:hover{
+    background-color: #53b06d;
+}
+
+
+/* scrollbar style */
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+} 
+
+::-webkit-scrollbar-thumb {
+    background-color: #358f50;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+
+}
