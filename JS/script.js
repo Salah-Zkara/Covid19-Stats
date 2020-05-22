@@ -43,7 +43,6 @@ function fnclk(e) {
                 R_cov.push(covid19[i].Recovered)
             }
 
-            dlabels.sort()
             window.myChart = new Chart(ctx, {
                 type: 'line',
                 data: {
