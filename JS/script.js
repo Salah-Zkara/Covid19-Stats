@@ -2,11 +2,24 @@ var ctx = document.getElementById('myChart').getContext('2d');
 var dleft=document.getElementById("dleft")
 var covid19
 var myChart
+var lastID
+var dleft1
 
 function fnclk(e) {
     if (window.myChart != undefined ) {
         window.myChart.destroy()
     }
+    if (lastID != undefined ) {
+        dleft1=document.getElementById(lastID)
+        console.log(dleft1)
+        dleft1.setAttribute('class','countries')
+    }
+
+    //sauvegarde d'ancien ID afin de l'utiliser pour retablir la class countries dans le prochaine click 
+    lastID=e.target.getAttribute('id')
+    e.target.setAttribute('class','countries1') 
+
+
     let req1=new XMLHttpRequest()
     req1.open("GET","https://api.covid19api.com/dayone/country/"+e.target.getAttribute('id'),true)
     req1.onreadystatechange=function () {
@@ -42,6 +55,7 @@ function fnclk(e) {
             for (let i = 0; i < covid19.length; i++) {
                 R_cov.push(covid19[i].Recovered)
             }
+
 
             window.myChart = new Chart(ctx, {
                 type: 'line',
