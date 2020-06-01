@@ -63,7 +63,7 @@ img{
 
 footer{
     background-color: #54af70;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -71,7 +71,6 @@ footer{
     text-align: center;
     font-family: 'Baloo Paaji 2', cursive;
     font-weight: 500;
-    overflow: hidden;
 }
 
 .countries{
