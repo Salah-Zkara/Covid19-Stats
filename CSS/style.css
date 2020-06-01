@@ -44,7 +44,6 @@ img{
     position: relative;
     margin: 20px;
     height: 90%;
-    overflow: auto;
 }
 
 #dleft{
@@ -72,6 +71,7 @@ footer{
     text-align: center;
     font-family: 'Baloo Paaji 2', cursive;
     font-weight: 500;
+    overflow: hidden;
 }
 
 .countries{
