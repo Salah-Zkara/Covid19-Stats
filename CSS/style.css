@@ -85,6 +85,14 @@ footer{
     background-color: #53b06d;
 }
 
+.countries1{
+    background-color: #53b06d;
+    margin: 2px auto;
+    height: 20px;
+    width: 90%;
+    padding-left: 10px;
+}
+
 
 /* scrollbar style */
 
