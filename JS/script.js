@@ -25,7 +25,6 @@ function fnclk(e) {
     req1.onreadystatechange=function () {
         if (req1.readyState==4 && req1.status==200) {
             covid19=JSON.parse(req1.response)
-            //console.log(covid19)
 
             let dlabels=[]
             let C_cov=[]
