@@ -5,13 +5,26 @@ var myChart
 var lastID
 var dleft1
 
+
+function alphaTrie(cov) {
+    for (let i = cov.length-1; i > 0; i--) {
+        for (let j = 0; j < i; j++) {
+            if (cov[j]['Country'] > cov[j+1]['Country']) {
+                [cov[j], cov[j+1]] = [cov[j+1], cov[j]]
+            }
+        }
+    }
+    return cov
+}
+
+
 function fnclk(e) {
     if (window.myChart != undefined ) {
         window.myChart.destroy()
     }
     if (lastID != undefined ) {
         dleft1=document.getElementById(lastID)
-        console.log(dleft1)
+        //console.log(dleft1)
         dleft1.setAttribute('class','countries')
     }
 
@@ -109,12 +122,12 @@ function fnclk(e) {
     req1.send()
 }
 
-
 let req=new XMLHttpRequest()
 req.open("GET","https://api.covid19api.com/countries",true)
 req.onreadystatechange=function () {
     if (req.readyState==4 && req.status==200) {
         let cov=JSON.parse(req.response)
+        cov=alphaTrie(cov)
         cov.forEach(e => {
             let a=document.createElement("div")
             a.setAttribute('id',e.ISO2)
@@ -123,10 +136,7 @@ req.onreadystatechange=function () {
             a.addEventListener('click',fnclk)
             dleft.appendChild(a)
         });
-
-
-
+        
     }
 }
 req.send()
-
